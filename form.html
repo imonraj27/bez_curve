@@ -37,16 +37,13 @@
           body: new URLSearchParams(formData).toString(),
         })
           .then(() => {
-            swal(
-              {
-                title: "THANK YOU",
-                text: "Your Messaged Received Successfully...",
-                type: "success",
-              },
-              function () {
-                window.location.href = "./";
-              }
-            );
+            swal({
+              title: "THANK YOU",
+              text: "Your Messaged Received Successfully...",
+              type: "success",
+            }).then(function () {
+              window.location.href = "./";
+            });
           })
           .catch((error) => alert(error));
       };
