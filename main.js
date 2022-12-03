@@ -6,7 +6,7 @@
  | << THIS IS AN APPLICATION                  |
  | TO DRAW BEZIER CURVES >>                   |
  |                                            |
- | LAST MODIFIED DATE: 1ST DECEMBER, 2022     |
+ | LAST MODIFIED DATE: 4th DECEMBER, 2022     |
  |--------------------------------------------|*/
 
 
