@@ -53,7 +53,7 @@ class Point {
         this.ctx.arc(this.x, canvas.height - this.y, 3, 0, 2 * Math.PI);
         this.ctx.fill();
         this.ctx.beginPath();
-        this.ctx.arc(this.x, canvas.height - this.y, 10, 0, 2 * Math.PI);
+        this.ctx.arc(this.x, canvas.height - this.y, 14, 0, 2 * Math.PI);
         this.ctx.stroke();
         ctx.restore();
     }
