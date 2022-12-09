@@ -120,7 +120,7 @@ function polynom(u, c) {
 }
 
 function drawCurve() {
-    for (let u = 0; u <= 1; u += 0.001) {
+    for (let u = 0; u <= 1; u += 0.0001) {
         let x = polynom(u, "x");
         let y = polynom(u, "y");
         let z = polynom(u, "z");
