@@ -35,7 +35,7 @@ class Point {
         this.y = y;
         this.z = z;
         this.ctx = ctx;
-        this.fillPix();
+        // this.fillPix();
     }
 
     fillPix() {
@@ -83,6 +83,9 @@ function clearCanvas() {
         ctx.stroke();
     }
     pointarr = [];
+
+    ctx.strokeStyle = "rgb(0,0,0)";
+
 }
 
 
@@ -120,11 +123,29 @@ function polynom(u, c) {
 }
 
 function drawCurve() {
-    for (let u = 0; u <= 1; u += 0.0004) {
+    let t;
+    let i = 0;
+    let thresh = 1.5 / 2;
+    for (let u = 0; u <= 1; u += 0.001) {
         let x = polynom(u, "x");
         let y = polynom(u, "y");
         let z = polynom(u, "z");
-        let p = new Point(x, y, x, ctx);
+        let p = new Point(x, y, z, ctx);
+        if (u != 0 && (Math.abs(p.x - t.x) > thresh || Math.abs(p.y - t.y) > thresh)) {
+            console.log(i);
+            i++;
+            ctx.save();
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.moveTo(p.x, canvas.height - p.y);
+            ctx.lineTo(t.x, canvas.height - t.y);
+            ctx.stroke();
+            ctx.restore();
+        } else {
+            p.fillPix();
+        }
+
+        t = p;
     }
     pointarr = [];
 }
