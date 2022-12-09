@@ -132,8 +132,8 @@ function drawCurve() {
         let z = polynom(u, "z");
         let p = new Point(x, y, z, ctx);
         if (u != 0 && (Math.abs(p.x - t.x) > thresh || Math.abs(p.y - t.y) > thresh)) {
-            console.log(i);
-            i++;
+            // console.log(i);
+            // i++;
             ctx.save();
             ctx.beginPath();
             ctx.lineWidth = 3;
