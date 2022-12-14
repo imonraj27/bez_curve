@@ -19,11 +19,15 @@
  ************************************/
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = 991;
-canvas.height = 511;
+const dpi = window.devicePixelRatio;
+canvas.width = 991 * dpi;
+canvas.height = 511 * dpi;
 let w = canvas.width;
 let h = canvas.height;
-let gap = 30;
+let gap = 30 * dpi;
+canvas.style.width = "991px";
+canvas.style.height = "511px";
+
 
 /************************************
  * The Point class for Point drawing
@@ -157,7 +161,7 @@ function getCursorPosition(event) {
     const rect = canvas.getBoundingClientRect()
     const x = event.clientX - rect.left
     const y = event.clientY - rect.top
-    let pt = new Point(x, canvas.height - y, 0, ctx)
+    let pt = new Point(x * dpi, canvas.height - y * dpi, 0, ctx)
     pt.circOutsidePt()
     pointarr.push(pt);
 }
