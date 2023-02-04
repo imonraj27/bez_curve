@@ -44,6 +44,58 @@
     .btn {
       font-size: 18px;
     }
+
+    /*---------------FOR ONLY FOOTER SECTION---------------------*/
+    .footer-copyright-section {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 340px;
+      height: 75px;
+      color: #fff;
+      background: rgb(58, 58, 170);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px 0 0 0;
+      animation: animateupdown 1s linear infinite alternate;
+    }
+
+    .footer-copyright-section * {
+      margin: 0;
+      padding: 1px;
+    }
+
+    .footer-copyright-section h2 {
+      font-size: 18px;
+      text-shadow: 0 0 5px #000;
+    }
+
+    .footer-copyright-section h2 i {
+      font-size: 22px;
+      color: #ff1100;
+
+    }
+
+    .footer-copyright-section p {
+      color: #998;
+      font-size: 15px;
+    }
+
+    .footer-copyright-section p a {
+      color: #aaa;
+    }
+
+    @keyframes animateupdown {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(8px);
+      }
+    }
   </style>
 </head>
 
@@ -83,6 +135,10 @@
     </div>
   </div>
   <div class="how-to-use" onclick="howtouse()">💡 How To Use ?&nbsp;</div>
+  <div class="footer-copyright-section">
+    <h2>Created With <i class="fa fa-heart"></i> by Imon Raj</h2>
+    <p>Copyright &copy; <a href="https://www.webdevway.com/">Imon Raj</a> </p>
+  </div>
   <script src="./main.js"></script>
 </body>
 
