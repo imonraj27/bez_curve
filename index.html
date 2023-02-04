@@ -51,17 +51,16 @@
     /*---------------FOR ONLY FOOTER SECTION---------------------*/
     .footer-copyright-section {
       position: fixed;
-      bottom: 0;
+      bottom: 10px;
       right: 0;
-      width: 340px;
-      height: 75px;
+      padding: 5px 17px;
       color: #fff;
       background: #242429;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border-radius: 20px 0 0 0;
+      border-radius: 14px;
       /* animation: animateupdown 1s linear infinite alternate; */
     }
 
@@ -99,13 +98,23 @@
         transform: translateY(8px);
       }
     }
+
+
+
+    a.navbar-brand {
+      font-weight: bold;
+      color: #2b00ff !important;
+      background: #fff;
+      padding: 3px 11px;
+      border-radius: 50px;
+    }
   </style>
 </head>
 
 <body style="background-color: #aaa">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav style="background: #160086 !important;" class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Bezier Curve</a>
+      <a class="navbar-brand" href="#"><i class="fa fa-bolt" aria-hidden="true"></i> Bezier Curve</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
